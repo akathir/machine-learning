@@ -1,45 +1,105 @@
 - [machine-learning](#machine-learning)
   - [Documentation Listings](#documentation-listings)
-    - [bandits](#bandits)
+    - [deep learning](#deep-learning)
+    - [model deployment](#model-deployment)
+    - [operation research](#operation-research)
+    - [reinforcement learning](#reinforcement-learning)
+    - [ad](#ad)
     - [search](#search)
-    - [time_series](#timeseries)
+    - [time series](#time-series)
     - [projects](#projects)
-    - [ab_tests](#abtests)
-    - [model_selection](#modelselection)
-    - [big_data](#bigdata)
-    - [dim_reduct](#dimreduct)
+    - [ab tests](#ab-tests)
+    - [model selection](#model-selection)
+    - [dim reduct](#dim-reduct)
     - [recsys](#recsys)
     - [trees](#trees)
-    - [association_rule](#associationrule)
     - [clustering](#clustering)
-    - [data_science_is_software](#datascienceissoftware)
-    - [deep_learning](#deeplearning)
     - [keras](#keras)
-    - [text_classification](#textclassification)
-    - [networkx](#networkx)
+    - [text classification](#text-classification)
     - [regularization](#regularization)
+    - [networkx](#networkx)
+    - [association rule](#association-rule)
+    - [big data](#big-data)
+    - [data science is software](#data-science-is-software)
     - [ga](#ga)
     - [unbalanced](#unbalanced)
-    - [clustering_old](#clusteringold)
-    - [linear_regression](#linearregression)
+    - [clustering old](#clustering-old)
+    - [linear regression](#linear-regression)
   - [Python Programming](#python-programming)
 
 # machine-learning
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ethen8181/machine-learning/blob/master/LICENSE)
-![Python 3.5](https://img.shields.io/badge/python-3.5-blue.svg)
-![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)
+![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)
+![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)
+![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)
+
 
 This is a continuously updated repository that documents personal journey on learning data science, machine learning related topics.
 
-**Goal:** Introduce machine learning contents in Jupyter Notebook format. The content aims to strike a good balance between mathematical notations, educational implementation from scratch using Python's scientific stack including numpy, numba, scipy, pandas, matplotlib, etc. and open-source library usage such as scikit-learn, pyspark, gensim, keras, pytorch, tensorflow, etc.
+**Goal:** Introduce machine learning contents in Jupyter Notebook format. The content aims to strike a good balance between mathematical notations, educational implementation from scratch using Python's scientific stack including numpy, numba, scipy, pandas, matplotlib, pyspark etc. and open-source library usage such as scikit-learn, fasttext, huggingface, onnx, xgboost, lightgbm, pytorch, keras, tensorflow, gensim, h2o, ortools, ray tune etc.
 
 
 ## Documentation Listings
 
-### bandits
+### deep learning
 
-Introduction to Multi-armed Bandits. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/bandits/multi_armed_bandits.ipynb)][[html](http://ethen8181.github.io/machine-learning/bandits/multi_armed_bandits.html)]
+Curated notes on deep learning.
+
+- Softmax Regression from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/softmax.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/softmax.html)]
+- Softmax Regression - Tensorflow hello world. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/softmax_tensorflow.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/softmax_tensorflow.html)]
+- Multi-layers Neural Network - Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/nn_tensorflow.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/nn_tensorflow.html)]
+- Convolutional Neural Network (CNN) - Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/cnn_image_tensorflow.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/cnn_image_tensorflow.html)]
+- Recurrent Neural Network (RNN).
+    - Vanilla RNN - Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/rnn/1_tensorflow_rnn.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/rnn/1_tensorflow_rnn.html)]
+    - Long Short Term Memory (LSTM) - Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/rnn/2_tensorflow_lstm.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/rnn/2_tensorflow_lstm.html)]
+    - RNN, LSTM - PyTorch hello world. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/rnn/1_pytorch_rnn.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/rnn/1_pytorch_rnn.html)]
+- Word2vec (skipgram + negative sampling) using Gensim. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/word2vec/word2vec_detailed.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/word2vec/word2vec_detailed.html)]
+- Sequence to Sequence Neural Network (Seq2Seq).
+    - Seq2Seq for German to English Machine Translation - PyTorch. Includes quick intro to torchtext [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/seq2seq/1_torch_seq2seq_intro.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/seq2seq/1_torch_seq2seq_intro.html)]
+    - Seq2Seq with Attention for German to English Machine Translation - PyTorch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/seq2seq/2_torch_seq2seq_attention.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/seq2seq/2_torch_seq2seq_attention.html)]
+- Subword Tokenization.
+    - Byte Pair Encoding (BPE) from scratch and quick walkthrough of sentencepiece. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/subword/bpe.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/subword/bpe.html)]
+- Fasttext.
+    - Multi-Label Text Classification with Fasttext and Huggingface Tokenizers. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/multi_label/fasttext.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/multi_label/fasttext.html)]
+    - Product Quantization for Model Compression. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/multi_label/product_quantization.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/multi_label/product_quantization.html)]
+    - Approximate Nearest Neighborhood Search with Navigable Small World. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/multi_label/nsw.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/multi_label/nsw.html)]
+- Graph Neural Network (GNN).
+    - Quick Introduction to Graph Neural Network Node Classification Task (DGL, GraphSAGE). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/gnn/gnn_node_classification_intro.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/gnn/gnn_node_classification_intro.html)]
+- Transformer.
+    - Transformer, Attention is All you Need - PyTorch, Huggingface Datasets. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/seq2seq/torch_transformer.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/seq2seq/torch_transformer.html)]
+    - Machine Translation with Huggingface Transformers mT5. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/seq2seq/translation_mt5/translation_mt5.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/seq2seq/translation_mt5/translation_mt5.html)]
+    - Fine Tuning Pre-trained Encoder on Question Answer Task. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/question_answer/question_answer.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/question_answer/question_answer.html)]
+    - Training Bi-Encoder Models with Contrastive Learning Notes. [[nbviewer](https://nbviewer.org/github/ethen8181/machine-learning/blob/master/deep_learning/contrastive/contrastive_learning_notes.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/contrastive/contrastive_learning_notes.html)]
+    - Sentence Transformer: Training Bi-Encoder via Contrastive Loss. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/contrastive/sentence_transformer.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/contrastive/sentence_transformer.html)]
+    - Introduction to CLIP (Contrastive Language-Image Pre-training), LiT, ViT [[nbviewer](https://nbviewer.org/github/ethen8181/machine-learning/blob/master/deep_learning/contrastive/clip/clip.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/contrastive/clip/clip.html)]
+    - Self Supervised (SIMCLR) versus Supervised Contrastive Learning. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/contrastive/self_supervised_vs_supervised_contrastive/self_supervised_vs_supervised_contrastive.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/contrastive/self_supervised_vs_supervised_contrastive/self_supervised_vs_supervised_contrastive.html)]
+    - Multilingual Sentence Embedding with LLM and PEFT LoRA (PyTorch Lightning) [[nbviewer](https://nbviewer.org/github/ethen8181/machine-learning/blob/master/deep_learning/contrastive/sentence_embedding_peft/sentence_embedding_peft.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/contrastive/sentence_embedding_peft/sentence_embedding_peft.html)]
+- Tabular
+  - Deep Learning for Tabular Data - PyTorch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/tabular/deep_learning_tabular.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/tabular/deep_learning_tabular.html)]
+  - Deep Learning - Learning to Rank 101 (RankNet, ListNet). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/tabular/deep_learning_learning_to_rank.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/tabular/deep_learning_learning_to_rank.html)]
+  - BERT CTR. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/tabular/bert_ctr/bert_ctr.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/tabular/bert_ctr/bert_ctr.html)]
+
+### model deployment
+
+- FastAPI & Azure Kubernetes Cluster. End to end example of training a model and hosting it as a service. [[folder](https://github.com/ethen8181/machine-learning/blob/master/model_deployment/fastapi_kubernetes)]
+- Quick Intro to Gradient Boosted Tree Inferencing. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_deployment/gbt_inference/gbt_inference.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_deployment/gbt_inference/gbt_inference.html)]
+- Speeding Up Transformers Inferencing. [[folder](https://github.com/ethen8181/machine-learning/blob/master/model_deployment/transformers)]
+- Working with AWS (Amazon Web Services). [[folder](https://github.com/ethen8181/machine-learning/blob/master/model_deployment/aws/)]
+
+### operation research
+
+- Operation Research Quick Intro Via Ortools. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/operation_research/ortools.ipynb)][[html](http://ethen8181.github.io/machine-learning/operation_research/ortools.html)]
+
+### reinforcement learning
+
+- Introduction to Multi-armed Bandits. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/reinforcement_learning/multi_armed_bandits.ipynb)][[html](http://ethen8181.github.io/machine-learning/reinforcement_learning/multi_armed_bandits.html)]
+
+### ad
+
+Notes related to advertising domain.
+
+- Quick introduction to generalized second price auction. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ad/gsp_ad_auction.ipynb)][[html](http://ethen8181.github.io/machine-learning/ad/gsp_ad_auction.html)]
 
 ### search
 
@@ -47,7 +107,7 @@ Information Retrieval, some examples are demonstrated using ElasticSearch.
 
 - Introduction to BM25 (Best Match). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/search/bm25_intro.ipynb)][[html](http://ethen8181.github.io/machine-learning/search/bm25_intro.html)]
 
-### time_series
+### time series
 
 Forecasting methods for timeseries-based data.
 
@@ -59,19 +119,23 @@ Forecasting methods for timeseries-based data.
 
 End to end project including data preprocessing, model building.
 
-- [Kaggle: Don't Get Kicked](https://www.kaggle.com/c/DontGetKicked): Predict if a car purchased at auction is a unfortunate purchase. [[folder](https://github.com/ethen8181/machine-learning/blob/master/projects/kaggle_dont_get_kicked/)]
-- mlutils: Machine learning utility function package [[folder](https://github.com/ethen8181/machine-learning/blob/master/projects/mlutils/)]
+- [Kaggle: Rossman Store Sales](https://www.kaggle.com/c/rossmann-store-sales/) Predicting daily store sales. Also introduces deep learning for tabular data. [[folder](https://github.com/ethen8181/machine-learning/blob/master/projects/kaggle_rossman_store_sales/)]
+- [Kaggle: Quora Insincere Questions Classification](https://www.kaggle.com/c/quora-insincere-questions-classification/) Predicting insincere questions. [[folder](https://github.com/ethen8181/machine-learning/blob/master/projects/kaggle_quora_insincere/)]
 
-### ab_tests
+### ab tests
 
 A/B testing, a.k.a experimental design. Includes: Quick review of necessary statistic concepts. Methods and workflow/thought-process for conducting the test and caveats to look out for.
 
 - Frequentist A/B testing (includes a quick review of concepts such as p-value, confidence interval). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ab_tests/frequentist_ab_test.ipynb)][[html](http://ethen8181.github.io/machine-learning/ab_tests/frequentist_ab_test.html)]
 - Quantile Regression and its application in A/B testing.
-  - Quick Introduction to Quantile Regression. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ab_tests/quantile_regression/quantile_regression.ipynb)][[html](http://ethen8181.github.io/machine-learning/ab_tests/quantile_regression/quantile_regression.html)]
-  - Quantile Regression's application in A/B testing. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ab_tests/quantile_regression/ab_test_regression.ipynb)][[html](http://ethen8181.github.io/machine-learning/ab_tests/quantile_regression/ab_test_regression.html)]
+    - Quick Introduction to Quantile Regression. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ab_tests/quantile_regression/quantile_regression.ipynb)][[html](http://ethen8181.github.io/machine-learning/ab_tests/quantile_regression/quantile_regression.html)]
+    - Quantile Regression's application in A/B testing. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ab_tests/quantile_regression/ab_test_regression.ipynb)][[html](http://ethen8181.github.io/machine-learning/ab_tests/quantile_regression/ab_test_regression.html)]
+- Casual Inference
+    - Propensity Score Matching. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ab_tests/causal_inference/matching.ipynb)][[html](http://ethen8181.github.io/machine-learning/ab_tests/causal_inference/matching.html)]
+    - Inverse Propensity Weighting. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ab_tests/causal_inference/inverse_propensity_weighting.ipynb)][[html](http://ethen8181.github.io/machine-learning/ab_tests/causal_inference/inverse_propensity_weighting.html)]
+    - Quick introduction to difference in difference. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ab_tests/causal_inference/diff_in_diff.ipynb)][[html](http://ethen8181.github.io/machine-learning/ab_tests/causal_inference/diff_in_diff.html)]
 
-### model_selection
+### model selection
 
 Methods for selecting, improving, evaluating models/algorithms.
 
@@ -80,22 +144,13 @@ Methods for selecting, improving, evaluating models/algorithms.
 - Evaluation metrics for imbalanced dataset. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/imbalanced/imbalanced_metrics.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_selection/imbalanced/imbalanced_metrics.html)]
 - Detecting collinearity amongst features (Variance Inflation Factor for numeric features and Cramer's V statistics for categorical features), also introduces Linear Regression from a Maximum Likelihood perspective and the R-squared evaluation metric. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/collinearity.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_selection/collinearity.html)]
 - Curated tips and tricks for technical and soft skills. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/tips_and_tricks/tips_and_tricks.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_selection/tips_and_tricks/tips_and_tricks.html)]
-- Partial Dependece Plot (PDP), model-agnostic approach for directional feature influence. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/partial_dependence/partial_dependence.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_selection/partial_dependence/partial_dependence.html)]
+- Partial Dependence Plot (PDP), model-agnostic approach for directional feature influence. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/partial_dependence/partial_dependence.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_selection/partial_dependence/partial_dependence.html)]
 - Kullback-Leibler (KL) Divergence. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/kl_divergence.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_selection/kl_divergence.html)]
+- Probability Calibration for classification models with Platt Scaling, Histogram Binning, Isotonic Regression. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/prob_calibration/prob_calibration.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_selection/prob_calibration/prob_calibration.html)]
+- Probability Calibration for deep learning classification models with Temperature Scaling. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/prob_calibration/deeplearning_prob_calibration.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_selection/prob_calibration/deeplearning_prob_calibration.html)]
+- HyperParameter Tuning with Ray Tune and Hyperband. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/ray_tune_hyperband.ipynb)][[html](http://ethen8181.github.io/machine-learning/model_selection/ray_tune_hyperband.html)]
 
-### big_data
-
-Exploring big data tools, such as Spark and H2O.ai. For those interested there's also a [pyspark rdd cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf) and [pyspark dataframe cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_SQL_Cheat_Sheet_Python.pdf) that may come in handy.
-
-- Local Hadoop cluster installation on Mac. [[markdown](https://github.com/ethen8181/machine-learning/tree/master/big_data/local_hadoop.md)]
-- PySpark installation on Mac. [[markdown](https://github.com/ethen8181/machine-learning/tree/master/big_data/spark_installation.md)]
-- Examples of manipulating with data (crimes data) and building a RandomForest model with PySpark MLlib. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/big_data/spark_crime.ipynb)][[html](http://ethen8181.github.io/machine-learning/big_data/spark_crime.html)]
-- PCA with PySpark MLlib. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/big_data/spark_pca.ipynb)][[html](http://ethen8181.github.io/machine-learning/big_data/spark_pca.html)]
-- Tuning Spark Partitions. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/big_data/spark_partitions.ipynb)][[html](http://ethen8181.github.io/machine-learning/big_data/spark_partitions.html)]
-- H2O API walkthrough (using GBM as an example). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/big_data/h2o/h2o_api_walkthrough.ipynb)][[html](http://ethen8181.github.io/machine-learning/big_data/h2o/h2o_api_walkthrough.html)]
-- Spark MLlib Binary Classification (using GBM as an example). [[raw zeppelin notebook](https://github.com/ethen8181/machine-learning/blob/master/big_data/sparkml/sparkml.json)][[Zepl](https://www.zepl.com/explore)]
-
-### dim_reduct
+### dim reduct
 
 Dimensionality reduction methods.
 
@@ -115,7 +170,8 @@ Recommendation system with a focus on matrix factorization methods. Starters int
     - (Text) Content-Based Recommenders. Introducing Approximate Nearest Neighborhood (ANN) - Locality Sensitive Hashing (LSH) for cosine distance from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/recsys/content_based/lsh_text.ipynb)][[html](http://ethen8181.github.io/machine-learning/recsys/content_based/lsh_text.html)]
 - Approximate Nearest Neighborhood (ANN):
     -  Benchmarking ANN implementations (nmslib). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/recsys/ann_benchmarks/ann_benchmarks.ipynb)][[html](http://ethen8181.github.io/machine-learning/recsys/ann_benchmarks/ann_benchmarks.html)]
-- Calibrated Recommendation. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/recsys/calibration/calibrated_reco.ipynb)][[html](http://ethen8181.github.io/machine-learning/recsys/calibration/calibrated_reco.html)]
+- Calibrated Recommendation for reducing bias/increasing diversity in recommendation. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/recsys/calibration/calibrated_reco.ipynb)][[html](http://ethen8181.github.io/machine-learning/recsys/calibration/calibrated_reco.html)]
+- Maximum Inner Product for Speeding Up Generating Recommendations. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/recsys/max_inner_product/max_inner_product.ipynb)][[html](http://ethen8181.github.io/machine-learning/recsys/max_inner_product/max_inner_product.html)]
 
 ### trees
 
@@ -124,15 +180,9 @@ Tree-based models for both regression and classification tasks.
 - Decision Tree from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/decision_tree.ipynb)][[html](http://ethen8181.github.io/machine-learning/trees/decision_tree.html)]
 - Random Forest from scratch and Extra Trees. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/random_forest.ipynb)][[html](http://ethen8181.github.io/machine-learning/trees/random_forest.html)]
 - Gradient Boosting Machine (GBM) from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/gbm/gbm.ipynb)][[html](http://ethen8181.github.io/machine-learning/trees/gbm/gbm.html)]
-- Xgboost API walkthrough (includes hyperparmeter tuning via scikit-learn like API). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/xgboost.ipynb)][[html](http://ethen8181.github.io/machine-learning/trees/xgboost.html)]
+- Xgboost API walkthrough (includes hyperparameter tuning via scikit-learn like API). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/xgboost.ipynb)][[html](http://ethen8181.github.io/machine-learning/trees/xgboost.html)]
 - LightGBM API walkthrough and a discussion about categorical features in tree-based models. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/lightgbm.ipynb)][[html](http://ethen8181.github.io/machine-learning/trees/lightgbm.html)]
-
-### association_rule
-
-Also known as market-basket analysis.
-
-- Apriori from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/association_rule/apriori.ipynb)][[html](http://ethen8181.github.io/machine-learning/association_rule/apriori.html)]
-- Using R's arules package (aprori) on tabular data. [[Rmarkdown](http://ethen8181.github.io/machine-learning/association_rule/R/apriori.html)]
+- Monotonic Constraint with Boosted Tree. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/monotonic.ipynb)][[html](http://ethen8181.github.io/machine-learning/trees/monotonic.html)]
 
 ### clustering
 
@@ -142,26 +192,6 @@ TF-IDF and Topic Modeling are techniques specifically used for text analytics.
 - K-means, K-means++ from scratch; Elbow method for choosing K. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/clustering/kmeans.ipynb)][[html](http://ethen8181.github.io/machine-learning/clustering/kmeans.html)]
 - Gaussian Mixture Model from scratch; AIC and BIC for choosing the number of Gaussians. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/clustering/GMM/GMM.ipynb)][[html](http://ethen8181.github.io/machine-learning/clustering/GMM/GMM.html)]
 - Topic Modeling with gensim's Latent Dirichlet Allocation(LDA). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/clustering/topic_model/LDA.ipynb)][[html](http://ethen8181.github.io/machine-learning/clustering/topic_model/LDA.html)]
-
-### data_science_is_software  
-
-Best practices for doing data science in Python.
-
-- View [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/data_science_is_software/notebooks/data_science_is_software.ipynb)][[html](http://ethen8181.github.io/machine-learning/data_science_is_software/notebooks/data_science_is_software.html)]
-
-### deep_learning
-
-Curated notes on deep learning.
-
-- Softmax Regression from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/softmax.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/softmax.html)]
-- Softmax Regression - Tensorflow hello world. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/softmax_tensorflow.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/softmax_tensorflow.html)]
-- Multi-layers Neural Network - Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/nn_tensorflow.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/nn_tensorflow.html)]
-- Convolutional Neural Network (CNN) - Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/cnn_image_tensorflow.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/cnn_image_tensorflow.html)]
-- Recurrent Neural Network (RNN).
-    - Vanilla RNN - Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/rnn/1_tensorflow_rnn.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/rnn/1_tensorflow_rnn.html)]
-    - Long Short Term Memory (LSTM) - Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/rnn/2_tensorflow_lstm.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/rnn/2_tensorflow_lstm.html)]
-    - RNN, LSTM - PyTorch hello world. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/rnn/1_pytorch_rnn.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/rnn/1_pytorch_rnn.html)]
-- Word2vec (skipgram + negative sampling) using Gensim (includes text preprocessing with spaCy). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/word2vec/word2vec_detailed.ipynb)][[html](http://ethen8181.github.io/machine-learning/deep_learning/word2vec/word2vec_detailed.html)]
 
 ### keras
 
@@ -173,15 +203,25 @@ For those interested there's also a [keras cheatsheet](https://s3.amazonaws.com/
     - Image classification basics. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/keras/cnn_image_keras.ipynb)][[html](http://ethen8181.github.io/machine-learning/keras/cnn_image_keras.html)]
     - Introduction to Residual Networks (ResNets) and Class Activation Maps (CAM). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/keras/resnet_cam/resnet_cam.ipynb)][[html](http://ethen8181.github.io/machine-learning/keras/resnet_cam/resnet_cam.html)]
 - Recurrent Neural Network (RNN) - language modeling basics. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/keras/rnn_language_model_basic_keras.ipynb)][[html](http://ethen8181.github.io/machine-learning/keras/rnn_language_model_basic_keras.html)]
+- Text Classification
+    - Word2vec for Text Classification. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/keras/text_classification/word2vec_text_classification.ipynb)][[html](http://ethen8181.github.io/machine-learning/keras/text_classification/word2vec_text_classification.html)]
+    - Leveraging Pre-trained Word Embedding for Text Classification. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/keras/text_classification/keras_pretrained_embedding.ipynb)][[html](http://ethen8181.github.io/machine-learning/keras/text_classification/keras_pretrained_embedding.html)]
+    - Sentencepiece Subword tokenization for Text Classification. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/keras/text_classification/keras_subword_tokenization.ipynb)][[html](http://ethen8181.github.io/machine-learning/keras/text_classification/keras_subword_tokenization.html)]
 
-### text_classification
+### text classification
 
-Naive Bayes and Logistic Regression for text classification.
+Deep learning techniques for text classification are categorized in its own section.
 
 - Building intuition with spam classification using scikit-learn (scikit-learn hello world). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/text_classification/basics/basics.ipynb)][[html](http://ethen8181.github.io/machine-learning/text_classification/basics/basics.html)]
 - Bernoulli and Multinomial Naive Bayes from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/text_classification/naive_bayes/naive_bayes.ipynb)][[html](http://ethen8181.github.io/machine-learning/text_classification/naive_bayes/naive_bayes.html)]
 - Logistic Regression (stochastic gradient descent) from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/text_classification/logistic.ipynb)][[html](http://ethen8181.github.io/machine-learning/text_classification/logistic.html)]
 - Chi-square feature selection from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/text_classification/chisquare.ipynb)][[html](http://ethen8181.github.io/machine-learning/text_classification/chisquare.html)]
+
+### regularization
+
+Building intuition on Ridge and Lasso regularization using scikit-learn.
+ 
+- View [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/regularization/regularization.ipynb)][[html](http://ethen8181.github.io/machine-learning/regularization/regularization.html)]
 
 ### networkx
 
@@ -191,11 +231,30 @@ Graph library other than `networkx` are also discussed.
 - Short Walkthrough of PageRank. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/networkx/page_rank.ipynb)][[html](http://ethen8181.github.io/machine-learning/networkx/page_rank.html)]
 - Influence Maximization from scratch. Includes discussion on Independent Cascade (IC), Submodular Optimization algorithms including Greedy and Lazy Greedy, a.k.a Cost Efficient Lazy Forward (CELF) [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/networkx/max_influence/max_influence.ipynb)][[html](http://ethen8181.github.io/machine-learning/networkx/max_influence/max_influence.html)]
 
-### regularization
+### association rule
 
-Building intuition on Ridge and Lasso regularization using scikit-learn.
- 
-- View [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/regularization/regularization.ipynb)][[html](http://ethen8181.github.io/machine-learning/regularization/regularization.html)]
+Also known as market-basket analysis.
+
+- Apriori from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/association_rule/apriori.ipynb)][[html](http://ethen8181.github.io/machine-learning/association_rule/apriori.html)]
+- Using R's arules package (aprori) on tabular data. [[Rmarkdown](http://ethen8181.github.io/machine-learning/association_rule/R/apriori.html)]
+
+### big data
+
+Exploring big data tools, such as Spark and H2O.ai. For those interested there's also a [pyspark rdd cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf) and [pyspark dataframe cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_SQL_Cheat_Sheet_Python.pdf) that may come in handy.
+
+- Local Hadoop cluster installation on Mac. [[markdown](https://github.com/ethen8181/machine-learning/tree/master/big_data/local_hadoop.md)]
+- PySpark installation on Mac. [[markdown](https://github.com/ethen8181/machine-learning/tree/master/big_data/spark_installation.md)]
+- Examples of manipulating with data (crimes data) and building a RandomForest model with PySpark MLlib. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/big_data/spark_crime.ipynb)][[html](http://ethen8181.github.io/machine-learning/big_data/spark_crime.html)]
+- PCA with PySpark MLlib. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/big_data/spark_pca.ipynb)][[html](http://ethen8181.github.io/machine-learning/big_data/spark_pca.html)]
+- Tuning Spark Partitions. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/big_data/spark_partitions.ipynb)][[html](http://ethen8181.github.io/machine-learning/big_data/spark_partitions.html)]
+- H2O API walkthrough (using GBM as an example). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/big_data/h2o/h2o_api_walkthrough.ipynb)][[html](http://ethen8181.github.io/machine-learning/big_data/h2o/h2o_api_walkthrough.html)]
+- Spark MLlib Binary Classification (using GBM as an example). [[raw zeppelin notebook](https://github.com/ethen8181/machine-learning/blob/master/big_data/sparkml/sparkml.json)][[Zepl](https://www.zepl.com/explore)]
+
+### data science is software 
+
+Best practices for doing data science in Python.
+
+- View [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/data_science_is_software/notebooks/data_science_is_software.ipynb)][[html](http://ethen8181.github.io/machine-learning/data_science_is_software/notebooks/data_science_is_software.html)]
 
 ### ga
 
@@ -211,7 +270,7 @@ Choosing the optimal cutoff value for logistic regression using cost-sensitive m
 - Visualize two by two standard confusion matrix and ROC curve with costs using ggplot2.
 - View [[Rmarkdown](http://ethen8181.github.io/machine-learning/unbalanced/unbalanced.html)]
 
-### clustering_old
+### clustering old
 
 A collection of scattered old clustering documents in R.
 
@@ -220,13 +279,14 @@ A collection of scattered old clustering documents in R.
 - Introducing tf-idf (term frequency-inverse document frequency), a text mining technique. Also uses it to perform text clustering via hierarchical clustering. [[Rmarkdown](http://ethen8181.github.io/machine-learning/clustering_old/tf_idf/tf_idf.html)]
 - Some useful evaluations when working with hierarchical clustering and K-means clustering (K-means++ is used here). Including Calinski-Harabasz index for determine the right K (cluster number) for clustering and boostrap evaluation of the clustering result’s stability. [[Rmarkdown](http://ethen8181.github.io/machine-learning/clustering_old/clustering/clustering.html)]
 
-### linear_regression
+### linear regression
 
 - Training Linear Regression with gradient descent in R, briefly covers the interpretation and visualization of linear regression's summary output. [[Rmarkdown](http://ethen8181.github.io/machine-learning/linear_regression/linear_regession.html)]
 
 
 ## Python Programming
 
+- Extremely Quick Guide to Unicode. [[markdown](https://github.com/ethen8181/machine-learning/blob/master/python/unicode.md)]
 - Quick Example of Factory Design Pattern. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/factory_pattern.ipynb)][[html](http://ethen8181.github.io/machine-learning/python/factory_pattern.html)]
 - Parallel programming with Python (threading, multiprocessing, concurrent.futures, joblib). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/parallel.ipynb)][[html](http://ethen8181.github.io/machine-learning/python/parallel.html)]
 - Understanding iterables, iterator and generators. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/iterator/iterator.ipynb)][[html](http://ethen8181.github.io/machine-learning/python/iterator/iterator.html)]
@@ -241,4 +301,3 @@ A collection of scattered old clustering documents in R.
 - Python's decorators (useful script for logging and timing function). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/decorators/decorators.ipynb)][[html](http://ethen8181.github.io/machine-learning/python/decorators/decorators.html)]
 - Pandas's pivot table. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/pivot_table/pivot_table.ipynb)][[html](http://ethen8181.github.io/machine-learning/python/pivot_table/pivot_table.html)]
 - Quick introduction to classmethod, staticmethod and property. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/class.ipynb)][[html](http://ethen8181.github.io/machine-learning/python/class.html)]
-

@@ -4,3 +4,8 @@
 
 # jupyter notebook's checkpoint
 **/.ipynb_checkpoints
+
+# various IDE files
+**/.vscode
+
+**/__pycache__
